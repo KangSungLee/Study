@@ -23,18 +23,18 @@ public class MazeEscape {
 
     // 주어진 표 수에 따라 칠판에 표시될 문자열을 반환하는 메소드
     public static String countVotes(int n) {
-        StringBuilder result = new StringBuilder();
+        String result = new String();
         int completeSets = n / 5;  // '++++ '의 개수
         int remainingVotes = n % 5;  // 남은 '|'의 개수
 
         // '++++ ' 추가
         for (int i = 0; i < completeSets; i++) {
-            result.append("++++ ");
+            result += "++++ ";
         }
 
         // 남은 '|' 추가
         for (int i = 0; i < remainingVotes; i++) {
-            result.append("|");
+            result += "|";
         }
 
         return result.toString().trim();
